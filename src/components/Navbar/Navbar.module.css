@@ -1,0 +1,126 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.scrolled {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  height: 70px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.container {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Styling */
+.logo a {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #2d3436;
+  text-decoration: none;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: #6c5ce7;
+}
+
+/* Nav Links */
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  color: #636e72;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.navLinks li a:hover {
+  color: #6c5ce7;
+}
+
+/* Action Buttons */
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.loginBtn {
+  background: transparent;
+  border: none;
+  color: #2d3436;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.premiumBtn {
+  background: #6c5ce7;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+}
+
+.premiumBtn:hover {
+  background: #5b4cc4;
+  transform: translateY(-2px);
+}
+
+.mobileToggle {
+  display: none;
+  cursor: pointer;
+  color: #2d3436;
+}
+
+/* Responsive Menu */
+@media (max-width: 992px) {
+  .mobileToggle { display: block; }
+  
+  .navLinks {
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    transition: 0.4s;
+  }
+
+  .navLinks.active {
+    left: 0;
+  }
+
+  .loginBtn { display: none; }
+}

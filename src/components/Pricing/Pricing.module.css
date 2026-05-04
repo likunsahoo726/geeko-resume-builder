@@ -1,0 +1,93 @@
+.pricingSection {
+  padding: 100px 8%;
+  background: #ffffff;
+  text-align: center;
+}
+
+.header h2 span { color: #6c5ce7; }
+.header p { color: #636e72; margin-bottom: 50px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  padding: 50px 30px;
+  border-radius: 24px;
+  background: #fff;
+  border: 1px solid #eee;
+  transition: 0.4s;
+  position: relative;
+}
+
+.popular {
+  border-color: #6c5ce7;
+  box-shadow: 0 20px 40px rgba(108, 92, 231, 0.15);
+  transform: scale(1.05);
+}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #6c5ce7;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.price {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin: 20px 0;
+  color: #2d3436;
+}
+
+.price span { font-size: 1.5rem; vertical-align: super; margin-right: 5px; }
+
+.features {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: #636e72;
+  font-size: 0.95rem;
+}
+
+.proBtn {
+  width: 100%;
+  padding: 15px;
+  background: #6c5ce7;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.freeBtn {
+  width: 100%;
+  padding: 15px;
+  background: #f1f2f6;
+  color: #2d3436;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.proBtn:hover { background: #5b4cc4; transform: translateY(-3px); }

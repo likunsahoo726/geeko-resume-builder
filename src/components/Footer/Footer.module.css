@@ -1,0 +1,55 @@
+.footer {
+  background: #0f0f0f;
+  color: #ffffff;
+  padding: 60px 8% 30px;
+  border-top: 1px solid #1a1a1a;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.logo { font-size: 1.5rem; font-weight: 800; margin-bottom: 10px; }
+.logo span { color: #6c5ce7; }
+.brandSide p { color: #666; font-size: 0.9rem; }
+
+.linksSide { display: flex; gap: 60px; }
+.linkGroup { display: flex; flex-direction: column; gap: 12px; }
+.linkGroup h4 { font-size: 0.8rem; text-transform: uppercase; color: #6c5ce7; letter-spacing: 1px; margin-bottom: 5px; }
+.linkGroup a { color: #888; text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
+.linkGroup a:hover { color: #fff; }
+
+.bottomBar {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #444;
+}
+
+/* Personal Branding Style */
+.developer {
+  color: #666;
+  font-weight: 500;
+}
+
+.developer span {
+  color: #ffffff; /* High contrast for your name */
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-left: 4px;
+}
+
+@media (max-width: 768px) {
+  .container { flex-direction: column; text-align: center; }
+  .linksSide { justify-content: center; gap: 30px; }
+  .bottomBar { flex-direction: column; gap: 15px; }
+}
