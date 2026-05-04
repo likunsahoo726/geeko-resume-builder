@@ -5,51 +5,52 @@ import { Check, Zap, Crown } from 'lucide-react';
 const Pricing = () => {
   const plans = [
     {
-      name: "Starter",
+      name: "Basic",
       price: "0",
-      features: ["1 Basic Template", "Standard PDF Download", "Community Support"],
-      isPro: false
+      features: ["Standard Template", "Basic Editor", "Watermark PDF"],
+      btnText: "Current Plan",
+      pro: false
     },
     {
-      name: "Professional",
+      name: "Pro Studio",
       price: "49",
-      features: ["All Premium Templates", "No Watermark", "ATS Optimization Score", "Priority Support"],
-      isPro: true,
-      popular: true
+      features: ["Premium Templates", "Photo Integration", "No Watermark", "AI Strength Meter"],
+      btnText: "Upgrade to Pro",
+      pro: true
     },
     {
-      name: "Ultimate",
+      name: "Elite Career",
       price: "99",
-      features: ["Everything in Pro", "AI Resume Rewriter", "LinkedIn Profile Review", "Custom Domain"],
-      isPro: true
+      features: ["Everything in Pro", "Priority Support", "ATS Keyword Optimization", "Custom Branding"],
+      btnText: "Go Elite",
+      pro: true
     }
   ];
 
   return (
     <section id="pricing" className={styles.pricingSection}>
-      <div className={styles.header}>
-        <h2>Investment in <span>Your Career</span></h2>
-        <p>Choose a plan that fits your professional goals.</p>
-      </div>
-
-      <div className={styles.grid}>
-        {plans.map((plan, index) => (
-          <div key={index} className={`${styles.card} ${plan.popular ? styles.popular : ''}`}>
-            {plan.popular && <div className={styles.badge}>Best Value</div>}
-            <h3>{plan.name}</h3>
-            <div className={styles.price}>
-              <span>₹</span>{plan.price}
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <h2>Simple <span>Pricing</span></h2>
+          <p>Invest in your career for the price of a cup of chai.</p>
+        </div>
+        <div className={styles.grid}>
+          {plans.map((plan, idx) => (
+            <div key={idx} className={`${styles.card} ${plan.pro ? styles.proCard : ''}`}>
+              {plan.pro && <div className={styles.popular}>POPULAR</div>}
+              <h3>{plan.name}</h3>
+              <div className={styles.price}>₹{plan.price}<span>/lifetime</span></div>
+              <ul className={styles.featureList}>
+                {plan.features.map((f, i) => (
+                  <li key={i}><Check size={16} color="#10b981"/> {f}</li>
+                ))}
+              </ul>
+              <button className={plan.pro ? styles.proBtn : styles.basicBtn}>
+                {plan.btnText}
+              </button>
             </div>
-            <ul className={styles.features}>
-              {plan.features.map((feature, i) => (
-                <li key={i}><Check size={16} color="#6c5ce7" /> {feature}</li>
-              ))}
-            </ul>
-            <button className={plan.popular ? styles.proBtn : styles.freeBtn}>
-              {plan.price === "0" ? "Start Free" : "Upgrade Now"}
-            </button>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
